@@ -1,0 +1,159 @@
+// scss
+@import "base/_base";
+@import "base/_reset";
+@import "mixin/_mixin";
+@import "setting/_variables";
+
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	.header {
+		padding-top: 3.8rem;
+		padding-bottom: 3.8rem;
+		padding-left: 2rem;
+		@include mq('sp') {
+			padding-top: 2.4rem;
+			padding-bottom: 2.4rem;
+		}
+		.box {
+			display: flex;
+			width: 100%;
+			.gnav {
+				.gnav-wrapper {
+					display: inline-block;
+					padding: 2.0rem;
+					svg {
+						width: 2.0rem;
+						height: 2.0rem;
+					}
+				}
+			}
+			.logo {
+				padding-left: 2.8rem;
+				.logo-txt_status {
+					svg {
+						height: 1rem;
+					}
+				}
+				.logo-txt_enName {
+					svg {
+						height: 1.4rem;
+					}
+				}
+				.logo-txt_jpName {
+					svg {
+						height: 1.2rem;
+					}
+				}
+			}
+		}
+		}
+	.main {
+		.main-list {
+			display: flex;
+			margin-bottom: 6rem;
+			padding-left: 2.0rem;
+			overflow: hidden;
+			width: 100vw;
+			@include mq('sp') {
+				margin-bottom: 4rem;
+			}
+			.main-item {
+				img {
+					vertical-align: bottom;
+					transition: all 0.2s ease 0s;
+					&:hover {
+						opacity: 0.5;
+					}
+					@include mq('sp') {
+						height: 12rem;
+					}
+				}
+			}
+		}
+		.first {
+			img {
+				height: 19.9rem;
+				width: auto;
+				min-width: 0;
+			}
+		}
+		.second {
+			img {
+				height: 20.0rem;
+				width: auto;
+			}
+		}
+		.third {
+			img {
+				height: 14.7rem;
+				width: auto;
+			}
+		}
+		.forth {
+			img {
+				height: 19.9rem;
+				width: auto;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+.menu_top {
+	position: absolute;
+	left: 2.0rem;
+	bottom: 2.0rem;
+	z-index: 100;
+	position: fixed;
+	.menu-item {
+		margin-bottom: 0.6rem;
+		height: 1.6rem;
+		a {
+			display: block;
+			svg {
+				height: 1.5rem;
+				background-color: #fff;
+				padding: 0.3rem 0.5rem;
+				transition: all 0.3s ease 0s;
+				&:hover {
+					background-color: #00ffa2;
+				}
+			}
+		}
+	}
+}
+
+.menu_under {
+	background-color: #000;
+	min-height: 100%;
+	width: 24.6rem;
+	z-index: -100;
+	padding-left: 5rem;
+	padding-top: 3.6rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	.menu-btn {
+		padding: 2rem;
+		position: relative;
+		right: 2rem;
+		display: inline-block;
+		margin-bottom: 3.6rem;
+		svg {
+			width: 2.0rem;
+			height: 2.0rem;
+		}
+	}
+	.menu-list {
+		.menu-item {
+			margin-bottom: 3.5rem;
+			a {
+				color: #ffffff;
+				display: inline-block;
+			}
+		}
+	}
+}
